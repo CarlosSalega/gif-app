@@ -1,19 +1,24 @@
 import { useState } from "react";
-import AddCategory from "./AddCategory";
+import AddCategory from "./components/AddCategory";
+import GifGrid from "./components/GifGrid";
 
 function App() {
-  const [categories, setCategories] = useState([""]);
+  const [categories, setCategories] = useState(["Dragon Ball"]);
+
+  const onAddCategory = (newCategory: string) => {
+    if (categories.includes(newCategory)) return;
+
+    setCategories([newCategory, ...categories]);
+  };
 
   return (
     <>
       <h1>Gif App</h1>
-      <AddCategory setCategories={setCategories} />
+      <AddCategory onNewCategory={(value) => onAddCategory(value)} />
 
-      <ol>
-        {categories.map((category) => {
-          return <li key={category}>{category}</li>;
-        })}
-      </ol>
+      {categories.map((category) => (
+        <GifGrid key={category} category={category} />
+      ))}
     </>
   );
 }
