@@ -1,23 +1,28 @@
-import { useEffect } from "react";
-import { GifGridProps } from "../types";
+import { useEffect, useState } from "react";
+import { GifGridProps, GifImage } from "../types";
+import getGifs from "../helpers/getGifs";
 
 const GifGrid: React.FC<GifGridProps> = ({ category }) => {
-  const getGifs = async () => {
-    const api = `https://api.giphy.com/v1/gifs/search?api_key=g7ZQF61bJtVy47nSHV25oGD5IVzFNGuq&q=${category}`;
-    const resp = await fetch(api);
-    const { data } = await resp.json();
-    console.log(data);
+  const [images, setImages] = useState<GifImage[]>([]);
+
+  const getImages = async () => {
+    const newImages: GifImage[] = await getGifs(category);
+    setImages(newImages);
   };
 
   useEffect(() => {
-    getGifs();
+    getImages();
   }, []);
 
   return (
-    <div>
+    <>
       <h3>{category}</h3>
-      <p>Hello World</p>
-    </div>
+      <ol>
+        {images.map(({ id, title }) => (
+          <li key={id}>{title}</li>
+        ))}
+      </ol>
+    </>
   );
 };
 
