@@ -16,7 +16,7 @@ export interface GiphyImageData {
   id: string;
   title: string;
   images: {
-    fixed_width_small: {
+    downsized_medium: {
       url: string;
     };
   };
