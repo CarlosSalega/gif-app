@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@babel/preset-env': ^7.22.7
   '@babel/preset-react': ^7.22.5
+  '@babel/preset-typescript': ^7.22.5
   '@testing-library/react': ^14.0.0
   '@types/jest': ^29.5.2
   '@types/react': ^18.0.37
@@ -30,6 +31,7 @@ dependencies:
 devDependencies:
   '@babel/preset-env': 7.22.7
   '@babel/preset-react': 7.22.5
+  '@babel/preset-typescript': 7.22.5
   '@testing-library/react': 14.0.0_biqbaboplfbrettd7655fr4n2y
   '@types/jest': 29.5.2
   '@types/react': 18.2.14
@@ -673,6 +675,15 @@ packages:
       '@babel/helper-plugin-utils': 7.22.5
     dev: true
 
+  /@babel/plugin-syntax-typescript/7.22.5:
+    resolution: {integrity: sha512-1mS2o03i7t1c6VzH6fdQ3OA8tcEIxwG18zIPRp+UY1Ihv6W+XZzBCVxExF9upussPXJ0xE9XRHwMoNs1ep/nRQ==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/helper-plugin-utils': 7.22.5
+    dev: true
+
   /@babel/plugin-syntax-typescript/7.22.5_@babel+core@7.22.8:
     resolution: {integrity: sha512-1mS2o03i7t1c6VzH6fdQ3OA8tcEIxwG18zIPRp+UY1Ihv6W+XZzBCVxExF9upussPXJ0xE9XRHwMoNs1ep/nRQ==}
     engines: {node: '>=6.9.0'}
@@ -1203,6 +1214,20 @@ packages:
       '@babel/helper-plugin-utils': 7.22.5
     dev: true
 
+  /@babel/plugin-transform-typescript/7.22.5:
+    resolution: {integrity: sha512-SMubA9S7Cb5sGSFFUlqxyClTA9zWJ8qGQrppNUm05LtFuN1ELRFNndkix4zUJrC9F+YivWwa1dHMSyo0e0N9dA==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/helper-annotate-as-pure': 7.22.5
+      '@babel/helper-create-class-features-plugin': 7.22.6
+      '@babel/helper-plugin-utils': 7.22.5
+      '@babel/plugin-syntax-typescript': 7.22.5
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /@babel/plugin-transform-unicode-escapes/7.22.5:
     resolution: {integrity: sha512-biEmVg1IYB/raUO5wT1tgfacCef15Fbzhkx493D3urBI++6hpJ+RFG4SrWMn0NEZLfvilqKf3QDrRVZHo08FYg==}
     engines: {node: '>=6.9.0'}
@@ -1356,6 +1381,21 @@ packages:
       '@babel/plugin-transform-react-jsx': 7.22.5
       '@babel/plugin-transform-react-jsx-development': 7.22.5
       '@babel/plugin-transform-react-pure-annotations': 7.22.5
+    dev: true
+
+  /@babel/preset-typescript/7.22.5:
+    resolution: {integrity: sha512-YbPaal9LxztSGhmndR46FmAbkJ/1fAsw293tSU+I5E5h+cnJ3d4GTwyUgGYmOXJYdGA+uNePle4qbaRzj2NISQ==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/helper-plugin-utils': 7.22.5
+      '@babel/helper-validator-option': 7.22.5
+      '@babel/plugin-syntax-jsx': 7.22.5
+      '@babel/plugin-transform-modules-commonjs': 7.22.5
+      '@babel/plugin-transform-typescript': 7.22.5
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@babel/regjsgen/0.8.0:
