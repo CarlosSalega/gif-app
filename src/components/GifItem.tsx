@@ -1,10 +1,9 @@
-import { GiphyImageData } from "../types";
+import { ShowImage } from "../helpers/types";
 
-const GifItem = ({ id, title, images }: GiphyImageData) => {
+const GifItem = ({ title, images }: ShowImage) => {
   return (
     <div className="card">
-      <h4>{id}</h4>
-      <img src={images.downsized_medium.url} alt={"img"} />
+      <img src={images.downsized_medium.url} alt={title} />
       <p>{title}</p>
     </div>
   );

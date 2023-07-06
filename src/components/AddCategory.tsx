@@ -1,5 +1,5 @@
 import { SetStateAction, useState } from "react";
-import { AddCategoryProps } from "../types";
+import { AddCategoryProps } from "../helpers/types";
 
 const AddCategory: React.FC<AddCategoryProps> = ({ onNewCategory }) => {
   const [inputValue, setInputValue] = useState("");

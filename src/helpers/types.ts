@@ -12,6 +12,15 @@ export interface GifImage {
   url: string;
 }
 
+export interface ShowImage {
+  title: string;
+  images: {
+    downsized_medium: {
+      url: string;
+    };
+  };
+}
+
 export interface GiphyImageData {
   id: string;
   title: string;
