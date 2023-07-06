@@ -1,3 +1,4 @@
+import React from "react";
 import { ShowImage } from "../helpers/types";
 
 const GifItem = ({ title, images }: ShowImage) => {
