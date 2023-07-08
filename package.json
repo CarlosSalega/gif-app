@@ -26,6 +26,7 @@
     "@babel/preset-typescript": "^7.22.5",
     "@testing-library/react": "^14.0.0",
     "@types/jest": "^29.5.2",
+    "@types/node": "^20.4.1",
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
     "@types/whatwg-fetch": "^0.0.33",
