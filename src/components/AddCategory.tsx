@@ -1,7 +1,8 @@
+import React from "react";
 import { SetStateAction, useState } from "react";
 import { AddCategoryProps } from "../helpers/types";
 
-const AddCategory: React.FC<AddCategoryProps> = ({ onNewCategory }) => {
+export const AddCategory: React.FC<AddCategoryProps> = ({ onNewCategory }) => {
   const [inputValue, setInputValue] = useState("");
 
   const onInputChange = (event: {
@@ -19,7 +20,7 @@ const AddCategory: React.FC<AddCategoryProps> = ({ onNewCategory }) => {
   };
 
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} aria-label="form">
       <input
         type="text"
         placeholder="Search gifs"
@@ -29,5 +30,3 @@ const AddCategory: React.FC<AddCategoryProps> = ({ onNewCategory }) => {
     </form>
   );
 };
-
-export default AddCategory;

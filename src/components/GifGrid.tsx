@@ -1,8 +1,9 @@
-import { GifGridProps, GifImage } from "../helpers/types";
-import GifItem from "./GifItem";
-import { useFetchGifs } from "../hooks/useFetchGifs";
+import React from "react";
+import { GifGridProps, GifImage } from "../helpers";
+import { useFetchGifs } from "../hooks";
+import { GifItem } from "./GifItem";
 
-const GifGrid: React.FC<GifGridProps> = ({ category }) => {
+export const GifGrid: React.FC<GifGridProps> = ({ category }) => {
   const { images, isLoading }: { images: GifImage[]; isLoading: boolean } =
     useFetchGifs(category);
 
@@ -22,5 +23,3 @@ const GifGrid: React.FC<GifGridProps> = ({ category }) => {
     </>
   );
 };
-
-export default GifGrid;
